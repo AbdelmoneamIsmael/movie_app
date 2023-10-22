@@ -37,7 +37,7 @@ class CustomNavBar extends GetView<BottomNavController> {
         child: Row(
           children: [
             ListView.separated(
-              separatorBuilder: (context, index) => SizedBox(width: 45),
+              separatorBuilder: (context, index) => const SizedBox(width: 45),
               shrinkWrap: true,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) => _barItems(
@@ -65,7 +65,7 @@ class CustomNavBar extends GetView<BottomNavController> {
                   ? Colors.white
                   : AppColors.greyColor,
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
             SmallText(

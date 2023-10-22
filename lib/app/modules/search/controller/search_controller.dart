@@ -1,7 +1,4 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:movie_app/app/modules/search/pages/category.dart';
-import 'package:movie_app/app/modules/search/pages/result.dart';
 
 class SearchControllerX extends GetxController {
   List<String> category = [
