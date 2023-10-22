@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:movie_app/global/constant/color.dart';
 import 'package:movie_app/global/styles/styles.dart';
 
-class SmallText extends StatelessWidget {
-  const SmallText({
+class CustomText extends StatelessWidget {
+  const CustomText({
     required this.title,
     super.key,
     this.fontSize = 14,

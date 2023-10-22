@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:movie_app/app/modules/movie_details/pages/movie_details.dart';
 import 'package:movie_app/app/modules/search/controller/search_controller.dart';
 import 'package:movie_app/global/constant/color.dart';
 import 'package:movie_app/global/text/small_text.dart';
@@ -21,7 +22,7 @@ class ResultView extends StatelessWidget {
           ),
           const Align(
             alignment: Alignment.topLeft,
-            child: SmallText(title: 'top results '),
+            child: CustomText(title: 'top results '),
           ),
           Container(
             height: 2,
@@ -42,45 +43,48 @@ class ResultView extends StatelessWidget {
     );
   }
 
-  Row _movieSearchCard() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Row(
-          children: [
-            Container(
-              height: 100,
-              width: 130,
-              decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(12)),
-                  image: DecorationImage(
-                      image: AssetImage('assets/images/category/search.png'))),
-            ),
-            const SizedBox(
-              width: 20,
-            ),
-            const Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SmallText(
-                  title: 'TimeLess',
-                  fontSize: 16,
-                ),
-                SmallText(
-                  title: 'Fantasy',
-                  fontSize: 12,
-                  fontWeight: FontWeight.normal,
-                  color: AppColors.greyColor,
-                ),
-              ],
-            ),
-          ],
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: SvgPicture.asset('assets/icons/svg/more_in_movie_search.svg'),
-        ),
-      ],
+  Widget _movieSearchCard() {
+    return GestureDetector(
+      onTap: () => Get.to(const MovieDetailsScreen()),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Row(
+            children: [
+              Container(
+                height: 100,
+                width: 130,
+                decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(12)),
+                    image: DecorationImage(
+                        image: AssetImage('assets/images/category/search.png'))),
+              ),
+              const SizedBox(
+                width: 20,
+              ),
+              const Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  CustomText(
+                    title: 'TimeLess',
+                    fontSize: 16,
+                  ),
+                  CustomText(
+                    title: 'Fantasy',
+                    fontSize: 12,
+                    fontWeight: FontWeight.normal,
+                    color: AppColors.greyColor,
+                  ),
+                ],
+              ),
+            ],
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: SvgPicture.asset('assets/icons/svg/more_in_movie_search.svg'),
+          ),
+        ],
+      ),
     );
   }
 }

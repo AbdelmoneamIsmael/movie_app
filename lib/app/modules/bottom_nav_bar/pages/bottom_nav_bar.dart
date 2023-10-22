@@ -68,7 +68,7 @@ class CustomNavBar extends GetView<BottomNavController> {
             const SizedBox(
               height: 5,
             ),
-            SmallText(
+            CustomText(
               title: title,
               color: controller.currentTap.value == index
                   ? Colors.white

@@ -46,7 +46,7 @@ class WatchScreen extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const SmallText(
+            const CustomText(
               title: 'Watch',
               fontSize: 16,
             ),

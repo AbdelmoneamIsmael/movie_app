@@ -41,7 +41,7 @@ class CategoryView extends StatelessWidget {
                         child: Padding(
                           padding:
                               const EdgeInsets.only(left: 13.0, bottom: 20),
-                          child: SmallText(
+                          child: CustomText(
                             title: intialize.category[index],
                             color: Colors.white,
                           ),

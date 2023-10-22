@@ -9,4 +9,6 @@ class Assets {
   static const searchIcon = "assets/icons/svg/search.svg";
   //textfield
   static const cancelIcon = "assets/icons/svg/cancel_icon.svg";
+  //button
+     static const playIcon = "assets/icons/svg/player.svg";
 }
