@@ -11,7 +11,7 @@ class ResultView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20.0),
+      padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -26,13 +26,13 @@ class ResultView extends StatelessWidget {
           Container(
             height: 2,
             margin: const EdgeInsets.symmetric(vertical: 20),
-            color: Color.fromARGB(255, 204, 199, 199),
+            color: const Color.fromARGB(255, 204, 199, 199),
           ),
           ListView.separated(
             shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) => _movieSearchCard(),
-            separatorBuilder: (context, index) => SizedBox(
+            separatorBuilder: (context, index) => const SizedBox(
               height: 20,
             ),
             itemCount: 4,
